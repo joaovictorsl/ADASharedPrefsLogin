@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Practicing</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="age">Age</string>
+    <string name="cpf">CPF</string>
+    <string name="sign_up">Sign UP</string>
+    <string name="password">Password</string>
+    <string name="logout">Logout</string>
+    <string name="create_notes">Create Notes</string>
 </resources>
