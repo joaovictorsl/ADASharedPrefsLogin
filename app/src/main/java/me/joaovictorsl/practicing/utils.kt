@@ -1,12 +1,15 @@
 package me.joaovictorsl.practicing
 
+import android.app.Activity
 import android.content.Context
 import android.text.Editable
 import android.widget.Toast
 import java.io.*
 import java.io.FileOutputStream
 
-fun openTextArchive(fileName : String, context: Context): String? {
+var activity: Activity? = null
+
+fun openTextArchive(fileName : String?, context: Context): String? {
     val stringBuilder = StringBuilder()
 
     try {
@@ -39,17 +42,13 @@ fun openTextArchive(fileName : String, context: Context): String? {
 
 }
 
-fun writeTextArchive(text : String, context: Context){
+fun writeTextArchive(text : String,filePath:String?, context: Context){
     try {
         val outputStream: FileOutputStream =
-            context.openFileOutput("myNotes.txt", Context.MODE_PRIVATE)
+            context.openFileOutput(filePath, Context.MODE_PRIVATE)
         outputStream.write(text.toByteArray())
         outputStream.close()
-        Toast.makeText(context.applicationContext, "Notes saved succesfully!", Toast.LENGTH_SHORT)
-            .show()
     } catch (e: Exception) {
         e.printStackTrace()
-        Toast.makeText(context.applicationContext, "Error saving notes  ", Toast.LENGTH_SHORT)
-            .show()
     }
 }
