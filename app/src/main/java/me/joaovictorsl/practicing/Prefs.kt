@@ -46,24 +46,24 @@ class Prefs(context: Context) {
     }
 
     var email: String?
-        get() = preferences.getString(EMAIL, "")
-        set(value) = preferences.edit().putString(EMAIL, value).apply()
+        get() = encryptedSharedPrefs.getString(EMAIL, "")
+        set(value) = encryptedSharedPrefs.edit().putString(EMAIL, value).apply()
 
     var pass: Int
         get() = encryptedSharedPrefs.getInt(PASS, 0)
         set(value) = encryptedSharedPrefs.edit().putInt(PASS, value).apply()
 
     var name: String?
-        get() = preferences.getString(NAME, "")
-        set(value) = preferences.edit().putString(NAME, value).apply()
+        get() = encryptedSharedPrefs.getString(NAME, "")
+        set(value) = encryptedSharedPrefs.edit().putString(NAME, value).apply()
 
     var age: Int
-        get() = preferences.getInt(AGE, 0)
-        set(value) = preferences.edit().putInt(AGE, value).apply()
+        get() = encryptedSharedPrefs.getInt(AGE, 0)
+        set(value) = encryptedSharedPrefs.edit().putInt(AGE, value).apply()
 
     var cpf: String?
-        get() = preferences.getString(CPF, "")
-        set(value) = preferences.edit().putString(CPF, value).apply()
+        get() = encryptedSharedPrefs.getString(CPF, "")
+        set(value) = encryptedSharedPrefs.edit().putString(CPF, value).apply()
 
     var tema: String?
         get() = preferences.getString(TEMA, "")
