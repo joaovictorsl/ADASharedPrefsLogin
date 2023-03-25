@@ -51,15 +51,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/logout"
-        app:layout_constraintEnd_toStartOf="@id/create_notes_btn"
+        app:layout_constraintEnd_toStartOf="@id/my_notes_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvCPF"/>
 
     <Button
-        android:id="@+id/create_notes_btn"
+        android:id="@+id/my_notes_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/create_notes"
+        android:text="@string/my_notes"
         app:layout_constraintTop_toBottomOf="@id/tvCPF"
         app:layout_constraintStart_toEndOf="@+id/logout_btn"
         app:layout_constraintEnd_toEndOf="parent"/>

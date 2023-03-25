@@ -8,4 +8,7 @@
     <string name="password">Password</string>
     <string name="logout">Logout</string>
     <string name="create_notes">Create Notes</string>
+    <string name="returna">Return</string>
+    <string name="save_notes">Save Notes</string>
+    <string name="my_notes">My Notes</string>
 </resources>

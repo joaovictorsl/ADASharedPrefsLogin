@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotesActivity">
+
+    <EditText
+        android:singleLine="false"
+        android:maxLines="19"
+        android:id="@+id/etNotes"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:inputType="textMultiLine"
+        android:gravity="top|start"
+        android:hint="@string/my_notes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/return_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/returna"
+        app:layout_constraintEnd_toStartOf="@id/save_notes_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNotes"/>
+
+    <Button
+        android:id="@+id/save_notes_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_notes"
+        app:layout_constraintTop_toBottomOf="@+id/etNotes"
+        app:layout_constraintStart_toEndOf="@+id/return_btn"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
