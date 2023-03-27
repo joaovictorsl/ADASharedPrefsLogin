@@ -3,6 +3,9 @@ package me.joaovictorsl.practicing
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import me.joaovictorsl.practicing.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
@@ -36,6 +39,12 @@ class SignUpActivity : AppCompatActivity() {
             prefs.name = etUsername.text.toString()
             prefs.age = etAge.text.toString().toInt()
             prefs.cpf = etCPF.text.toString()
+            val user = User(id = prefs.email.toString(), filePath = "${prefs.email.toString()}.txt")
+            val userDao = AppDatabase.create(this).userDao()
+
+            CoroutineScope(Dispatchers.IO).launch {
+                userDao.insertUser(user)
+            }
 
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)

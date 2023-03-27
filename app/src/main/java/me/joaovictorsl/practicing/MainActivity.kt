@@ -34,5 +34,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        binding.myNotesBtn.setOnClickListener{
+            val intent = Intent(this, NotesActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }
